@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j0v-5h-FSf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" customModule="CircularReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjE-yl-z0F">
+                                <rect key="frame" x="265" y="92" width="79" height="30"/>
+                                <state key="normal" title="Simple Run">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="simpleRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mDb-73-2ol"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dq-g8-71S">
+                                <rect key="frame" x="172" y="91" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-2E-qQC">
+                                <rect key="frame" x="252" y="209" width="107" height="30"/>
+                                <state key="normal" title="dispatch_async">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dispatchAsyncRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XGH-SW-kdf"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brc-px-6TT">
+                                <rect key="frame" x="172" y="208" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkw-a6-1fb">
+                                <rect key="frame" x="242" y="318" width="124" height="30"/>
+                                <state key="normal" title="Local Object Leak">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="localLeakRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vo6-us-t5h"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tae-RV-8e6">
+                                <rect key="frame" x="172" y="317" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSf-yn-ebd">
+                                <rect key="frame" x="263" y="150" width="85" height="30"/>
+                                <state key="normal" title="Typical Leak">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="typicalLeakRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JCr-nO-P4y"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m56-jo-ctF">
+                                <rect key="frame" x="172" y="149" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ty0-P2-NJJ">
+                                <rect key="frame" x="243" y="263" width="122" height="30"/>
+                                <state key="normal" title="Instance Var Leak">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="instanceLeakRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5gC-0Q-TWP"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGn-K2-Myb">
+                                <rect key="frame" x="172" y="262" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="854-wF-HQH">
+                                <rect key="frame" x="267" y="370" width="76" height="30"/>
+                                <state key="normal" title="Class Leak">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="classLeakRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="USD-qh-KoV"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Erj-8q-hGL">
+                                <rect key="frame" x="172" y="369" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBZ-mK-Qpl">
+                                <rect key="frame" x="254" y="419" width="102" height="30"/>
+                                <state key="normal" title="Singleton Leak">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="singletonLeakRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6kt-4p-Jzy"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yRj-8Y-59T">
+                                <rect key="frame" x="172" y="419" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GGn-K2-Myb" firstAttribute="centerY" secondItem="ty0-P2-NJJ" secondAttribute="centerY" constant="-0.5" id="05O-Sl-6Oi"/>
+                            <constraint firstAttribute="centerX" secondItem="mBZ-mK-Qpl" secondAttribute="centerX" constant="-5" id="2sw-Wi-rZU"/>
+                            <constraint firstItem="Quj-2E-qQC" firstAttribute="centerY" secondItem="Brc-px-6TT" secondAttribute="centerY" constant="0.5" id="4B1-Bl-kUz"/>
+                            <constraint firstItem="kkw-a6-1fb" firstAttribute="top" secondItem="Quj-2E-qQC" secondAttribute="bottom" constant="79" id="4Kr-DB-vr0"/>
+                            <constraint firstItem="kkw-a6-1fb" firstAttribute="leading" secondItem="tae-RV-8e6" secondAttribute="trailing" constant="21" id="ANq-eG-rBL"/>
+                            <constraint firstItem="ty0-P2-NJJ" firstAttribute="top" secondItem="Quj-2E-qQC" secondAttribute="bottom" constant="24" id="CMq-8Q-wQP"/>
+                            <constraint firstItem="Quj-2E-qQC" firstAttribute="leading" secondItem="Brc-px-6TT" secondAttribute="trailing" constant="31" id="Df1-cn-3xw"/>
+                            <constraint firstItem="AjE-yl-z0F" firstAttribute="leading" secondItem="8dq-g8-71S" secondAttribute="trailing" constant="44" id="Fet-Et-dj0"/>
+                            <constraint firstItem="854-wF-HQH" firstAttribute="top" secondItem="kkw-a6-1fb" secondAttribute="bottom" constant="22" id="HKb-IS-YIV"/>
+                            <constraint firstItem="mBZ-mK-Qpl" firstAttribute="centerY" secondItem="yRj-8Y-59T" secondAttribute="centerY" constant="-0.5" id="KbE-bM-Vem"/>
+                            <constraint firstItem="VSf-yn-ebd" firstAttribute="leading" secondItem="m56-jo-ctF" secondAttribute="trailing" constant="42" id="NLa-U3-KYG"/>
+                            <constraint firstItem="VSf-yn-ebd" firstAttribute="centerY" secondItem="m56-jo-ctF" secondAttribute="centerY" constant="0.5" id="NMh-WN-cWk"/>
+                            <constraint firstItem="mBZ-mK-Qpl" firstAttribute="top" secondItem="854-wF-HQH" secondAttribute="bottom" constant="19" id="PD1-IU-bGh"/>
+                            <constraint firstItem="AjE-yl-z0F" firstAttribute="top" secondItem="8dq-g8-71S" secondAttribute="top" constant="1" id="Qfe-5K-wgS"/>
+                            <constraint firstAttribute="centerX" secondItem="VSf-yn-ebd" secondAttribute="centerX" constant="-5.5" id="S4c-l4-aWX"/>
+                            <constraint firstAttribute="centerX" secondItem="ty0-P2-NJJ" secondAttribute="centerX" constant="-4" id="Sxs-A2-bwd"/>
+                            <constraint firstItem="Quj-2E-qQC" firstAttribute="top" secondItem="AjE-yl-z0F" secondAttribute="bottom" constant="87" id="U49-8j-8s1"/>
+                            <constraint firstItem="kkw-a6-1fb" firstAttribute="centerY" secondItem="tae-RV-8e6" secondAttribute="centerY" constant="0.5" id="WIN-Cr-7p2"/>
+                            <constraint firstAttribute="centerX" secondItem="854-wF-HQH" secondAttribute="centerX" constant="-5" id="am4-FG-3Q0"/>
+                            <constraint firstAttribute="centerX" secondItem="Quj-2E-qQC" secondAttribute="centerX" constant="-5.5" id="cOT-gf-jR9"/>
+                            <constraint firstItem="AjE-yl-z0F" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="dtb-Ds-j3N"/>
+                            <constraint firstAttribute="centerX" secondItem="kkw-a6-1fb" secondAttribute="centerX" constant="-4" id="esP-SI-QHY"/>
+                            <constraint firstItem="Erj-8q-hGL" firstAttribute="centerY" secondItem="854-wF-HQH" secondAttribute="centerY" constant="-0.5" id="fBD-HK-PFl"/>
+                            <constraint firstItem="ty0-P2-NJJ" firstAttribute="leading" secondItem="GGn-K2-Myb" secondAttribute="trailing" constant="22" id="iqp-kZ-xRB"/>
+                            <constraint firstItem="mBZ-mK-Qpl" firstAttribute="leading" secondItem="yRj-8Y-59T" secondAttribute="trailing" constant="33" id="qeM-kM-JQ6"/>
+                            <constraint firstAttribute="centerX" secondItem="AjE-yl-z0F" secondAttribute="centerX" constant="-4.5" id="rjr-Hz-EHS"/>
+                            <constraint firstItem="854-wF-HQH" firstAttribute="leading" secondItem="Erj-8q-hGL" secondAttribute="trailing" constant="46" id="sJj-u4-MmF"/>
+                            <constraint firstItem="VSf-yn-ebd" firstAttribute="top" secondItem="AjE-yl-z0F" secondAttribute="bottom" constant="28" id="vkL-Q4-Xky"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9H3-U4-REs"/>
+                    <connections>
+                        <outlet property="classLeakButton" destination="854-wF-HQH" id="F7t-dl-4Nr"/>
+                        <outlet property="classLeakSwitch" destination="Erj-8q-hGL" id="7pm-DH-4as"/>
+                        <outlet property="dispatchAsyncButton" destination="Quj-2E-qQC" id="leI-EO-NhN"/>
+                        <outlet property="dispatchLeakSwitch" destination="Brc-px-6TT" id="OFW-za-lM3"/>
+                        <outlet property="instanceVarLeakButton" destination="ty0-P2-NJJ" id="PSy-Ue-jti"/>
+                        <outlet property="instanceVarLeakSwitch" destination="GGn-K2-Myb" id="Pdb-VW-jrz"/>
+                        <outlet property="leakSwitch" destination="8dq-g8-71S" id="KD0-Yd-yzR"/>
+                        <outlet property="localLeakSwitch" destination="tae-RV-8e6" id="Qea-Su-Mhp"/>
+                        <outlet property="localObjectLeakButton" destination="kkw-a6-1fb" id="0Lo-sO-sFv"/>
+                        <outlet property="simpleRunButton" destination="AjE-yl-z0F" id="kfi-ro-RRz"/>
+                        <outlet property="singletonLeakButton" destination="mBZ-mK-Qpl" id="EE6-uh-ZH4"/>
+                        <outlet property="singletonLeakSwitch" destination="yRj-8Y-59T" id="6v7-j4-vAd"/>
+                        <outlet property="typicalLeakButton" destination="VSf-yn-ebd" id="Aht-Vi-DZj"/>
+                        <outlet property="typicalLeakSwitch" destination="m56-jo-ctF" id="r4Z-ad-f2Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yHm-OV-SaJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j0v-5h-FSf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HGz-3F-Lx4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="tAy-Ei-nwc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQX-eB-m5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="-306"/>
+        </scene>
+    </scenes>
+</document>
